@@ -1,0 +1,476 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 16px;
+}
+
+
+
+
+/* reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 이유: padding, border 때문에 계산이 틀어져 100% 넘어가는 일이 없게 함 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  color: #333;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+/* wrap */
+#wrap {
+  width: 100%;
+  min-width: 320px;
+}
+
+.top_line {
+  background-color: #6C584C;
+  width: 100%;
+  height: 30px;
+}
+
+#top {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* 수평정렬 */
+  align-items: center;
+  background-color: #F0EAD2;
+}
+
+.new_logo {
+  width: 60px;
+}
+
+#recom_top {
+  width: 100%;
+  border-bottom: 1px solid #6C584C;
+  padding: 10px;
+}
+
+/* 스크롤바 안 보이게! */
+#recom_top ul::-webkit-scrollbar {
+  display: none;
+}
+
+#recom_top ul {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  list-style: none;
+  padding: 7px;
+  gap: 7px;
+  margin: 0;
+}
+
+
+#recom_top li {
+  flex: 0 0 auto;
+}
+
+#recom_top a {
+  font-size: 14px;
+  white-space: nowrap;
+  display: block;
+}
+
+/* 추천 부분 네모가 너무 작음 */
+/* ul 부분 마진탑 먹이고싶음 */
+/* 보더바텀이 안먹힘 ㅠㅠ 뭘로 선주지 */
+/* 250707(월) 여기까지 */
+/* .recom_box {
+  color: #fff;
+  background-color: #6C584C;
+  border-radius: 10px;
+} */
+
+#noti_top {
+  width: 95%;
+  min-height: 180px;
+  height: auto;
+  aspect-ratio: 5/1;
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+:root {
+  --swiper-theme-color: #fff;
+}
+
+/* html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #fff;
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  padding: 0;
+} */
+
+.swiper {
+  width: 100%;
+  min-height: 180px;
+}
+
+.swiper-slide {
+
+  height: 100%;
+  min-height: 100%;
+  text-align: center;
+  font-size: 5px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px; */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 95%;
+  object-fit: cover;
+  /* min-height: 17px; */
+}
+
+/* event_wrap */
+#event_wrap {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+}
+
+#event_box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.box {
+  width: 23%;
+  margin: 10px 0.5%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.box span {
+  font-size: 14px;
+  display: block;
+  text-align: center;
+  margin: 2px;
+}
+
+/* 문제가 많은 것 같다 */
+
+/* middle_wrap */
+#middle_wrap {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+#middle_wrap h2 {
+  width: 100%;
+  font-size: 25px;
+  display: inline-block;
+}
+
+.date {
+  color: #4497C0;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.age,
+.man {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 7px;
+  margin: 20px 0;
+}
+.age {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+.age::-webkit-scrollbar {
+  display: none;
+}
+
+
+.middle_atc,
+.middle_all {
+  padding: 5px 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  /* 버튼이 너무 작아지는 것 방지 */
+}
+
+.middle_atc {
+  background-color: #DDE5B6;
+  padding: 5px 15px;
+  border-radius: 10px;
+  border: 1px solid #A98467;
+}
+
+.middle_all {
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #F0EAD2;
+  border: 1px solid #ADC178;
+}
+
+/* book_now */
+.book_now_wrap {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.book_now {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease;
+}
+
+  .book_now_page {
+    min-height: 300px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 0 16px;
+  width: 50%;
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+
+.book_now_page a {
+  flex: 1;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ← 왼쪽 정렬로 바꿈 */
+  text-align: left;
+}
+
+.photo_wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2/3; /* 책 비율에 맞게 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo_wrap img:not(.num) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+/* .photo_wrap img { width: 100%; height: auto; object-fit: contain; } */
+/* .num {
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+} */
+.num {
+  position: absolute;
+  left: -10px;
+  bottom: -10px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  z-index: 2;
+}
+
+
+.book_title {
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: -1px;
+  margin: 5px 0;
+}
+
+.book_ex {
+  font-size: 12px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.book_star {
+  font-size: 12px;
+}
+
+/* #midprev, #midnext { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.5); color: #fff; border: none; padding: 10px; cursor: pointer; z-index: 10; }
+#midprev { left: 10px; }
+#midnext { right: 10px; } */
+/* 버튼 어떻게 구현하지 */
+
+/* recom_wrap */
+.recom_wrap {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.recom_wrap h2 {
+  font-size: 25px;
+  display: inline-block;
+}
+
+.recom_cube {
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  padding: 15px;
+}
+
+.recom_1,
+.recom_2,
+.recom_3 {
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.recom_1 a,
+.recom_2 a,
+.recom_3 a {
+  display: inline-block;
+  color: #fff;
+  background-color: #ADC178;
+  padding: 5px 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+  /* 한 줄 유지 */
+  font-size: 13px;
+}
+
+.recom_1 a:hover {
+  color: #fff;
+  background-color: #6C584C;
+}
+
+.recom_2 a:hover {
+  color: #fff;
+  background-color: #6C584C;
+}
+
+.recom_3 a:hover {
+  color: #fff;
+  background-color: #6C584C;
+}
+
+/* bottom */
+#bottom {
+  padding: 60px 50px 30px 50px;
+}
+
+.bot_top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.vol1 p {
+  font-size: 12px;
+  padding-left: 35px;
+}
+
+.vol_txt1 {
+  background: url("../images/headset_mic.png") no-repeat left center;
+  height: 60px;
+  line-height: 60px;
+}
+
+.vol2 p {
+  font-size: 12px;
+  padding-left: 35px;
+}
+
+.vol_txt2 {
+  background: url("../images/volume_down.png") no-repeat left center;
+  height: 60px;
+  line-height: 60px;
+}
+
+
+#bot_bot {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 85%;
+}
+
+.atc1 {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.atc1 img {
+  width: 80%;
+}
+
+.atc2 {
+  font-size: 12px;
+  clear: both;
+}
+
+@media screen and (max-width: 480px) {
+  #recom_top ul {
+    justify-content: center;
+    padding: 0 10px;
+  }
+
+  #recom_top a {
+    white-space: nowrap; /* 줄바꿈 안 되게 유지 */
+  }
+
+  .recom_box {
+    text-align: center;
+  }
+}

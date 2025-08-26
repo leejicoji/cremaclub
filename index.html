@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crema Club</title>
+  <link rel="icon" href="images/favicon1.ico" sizes="16x16">
+  <link rel="icon" href="images/favicon2.ico" sizes="32x32">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout3.css">
+  <!-- <script src="js/jquery-3.1.1.min.js"></script> -->
+  <script>
+  let currentPage = 0;
+  const bookNow = document.querySelector('.book_now');
+  const nextBtn = document.getElementById('midnext');
+  const prevBtn = document.getElementById('midprev');
+
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < 1) { // 총 페이지 수 - 1
+      currentPage++;
+      updateSlide();
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      updateSlide();
+    }
+  });
+
+  function updateSlide() {
+    const offset = currentPage * -100;
+    bookNow.style.transform = `translateX(${offset}%)`;
+  }
+</script>
+</head>
+
+<body>
+  <div id="wrap">
+    <div class="top_line"></div>
+    <header id="top">
+      <div class="top_left">
+        <a href="menu.html"><img src="images/menu.png" alt="메뉴"></a>
+      </div><!-- top_left -->
+      <h1><a href="index.html"><img src="images/new_logo.png" alt="crema" class="new_logo"></a></h1>
+      <div class="top_right">
+        <a href="#"><img src="images/search.png" alt="검색"></a>
+      </div><!-- top_right -->
+    </header><!-- top -->
+
+    <div id="recom_top">
+      <ul>
+        <li><a href="#" class="recom_box">추천</a></li>
+        <li><a href="#">기획전</a></li>
+        <li><a href="#">소설</a></li>
+        <li><a href="#">인문/사회/역사</a></li>
+        <li><a href="#">경영/경제</a></li>
+        <li><a href="#">자기계발</a></li>
+      </ul>
+      <!-- <p class="recom_line"></p> -->
+    </div><!-- recom_top -->
+
+    <div id="noti_top">
+      <p class="l_box"></p>
+
+      <!-- swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" id="s_first"><img src="images/not1.png" alt="pic"></div>
+          <div class="swiper-slide"><img src="images/not2.png" alt="pic"></div>
+          <div class="swiper-slide"><img src="images/not3.png" alt="pic"></div>
+          <div class="swiper-slide"><img src="images/not4.png" alt="pic"></div>
+        </div><!-- swiper-wrapper -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!--         <div class="swiper-pagination"></div> -->
+      </div><!-- mySwiper -->
+
+      <p class="r_box"></p>
+    </div><!-- noti_top -->
+
+    <div id="event_wrap">
+      <ul id="event_box">
+        <li class="box"><a href="#"><img src="images/m_new.png" alt=""><span>신간</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_event.png" alt=""><span>이벤트</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_infor.png" alt=""><span>이용안내</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_user.png" alt=""><span>회원혜택</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_best.png" alt=""><span>베스트</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_gift.png" alt=""><span>선물하기</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_audio.png" alt=""><span>오디오</span></a></li>
+        <li class="box"><a href="#"><img src="images/m_cash.png" alt=""><span>e캐시</span></a></li>
+      </ul><!-- event_box -->
+    </div><!-- event_wrap -->
+    <!--     <div class="turn_over">
+      <a href="#"><img src="images/emp_swa.png" alt="넘기기1"></a>
+      <a href="#"><img src="images/fill_swa.png" alt="넘기기2"></a>
+    </div> -->
+
+    <div id="middle_wrap">
+      <h2>실시간 인기 도서</h2>
+      <p class="date">⏲2025년 6월 2일 오후 5:24</p>
+      <div class="age">
+        <a href="#" class="middle_all">전체</a>
+        <a href="#" class="middle_atc">10대</a>
+        <a href="#" class="middle_atc">20대</a>
+        <a href="#" class="middle_atc">30대</a>
+        <a href="#" class="middle_atc">40대</a>
+      </div><!-- age -->
+      <div class="man">
+        <a href="#" class="middle_all">전체</a>
+        <a href="#" class="middle_atc">여성</a>
+        <a href="#" class="middle_atc">남성</a>
+      </div><!-- age -->
+
+    <div class="book_now_wrap">
+      <div class="book_now">
+        <div class="book_now_page">
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num1.png" alt="인기도서" class="num">
+              <img src="images/now1.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">어떻게 이 삶을 사랑할 것인가</h3>
+            <p class="book_ex">마이클 노턴</p>
+            <p class="book_star">⭐5.0</p>
+          </a>
+
+
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num2.png" alt="인기도서" class="num">
+              <img src="images/now2.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">위버멘쉬</h3>
+            <p class="book_ex">프리드리히 니체</p>
+            <p class="book_star">⭐4.82</p>
+          </a>
+
+
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num3.png" alt="인기도서" class="num">
+              <img src="images/now3.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">나태한 완벽주의자</h3>
+            <p class="book_ex">피터 홀린스</p>
+            <p class="book_star">⭐5.0</p>
+          </a>
+        </div><!-- book_now_page -->
+
+        <div class="book_now_page">
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num4.png" alt="인기도서" class="num">
+              <img src="images/now4.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">호감 가는 사람은 말투가 다르다</h3>
+            <p class="book_ex">박근일</p>
+            <p class="book_star">⭐4.8</p>
+          </a>
+
+
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num5.png" alt="인기도서" class="num">
+              <img src="images/now5.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">혼모노</h3>
+            <p class="book_ex">성해나</p>
+            <p class="book_star">⭐4.4</p>
+          </a>
+
+
+          <a href="#">
+            <div class="photo_wrap">
+              <img src="images/num6.png" alt="인기도서" class="num">
+              <img src="images/now6.png" alt="인기도서">
+            </div>
+            <h3 class="book_title">청춘의 독서</h3>
+            <p class="book_ex">유시민</p>
+            <p class="book_star">⭐4.5</p>
+          </a>
+        </div><!-- book_now_page -->
+      </div>
+        <!-- 4~6위는 오버플로우 히든으로 숨기고 js에서 슬라이드 효과주기 -->
+      </div><!-- book_now -->
+    </div><!-- middle_wrap -->
+<!--     <button id="midnext"></button>
+    <button id="midprev"></button> -->
+
+    <div class="recom_wrap">
+      <h2>한 문장으로 보는 추천 도서</h2>
+      <div class="recom_cube">
+        <div class="recom_1">
+          <a href="#"><span>새로운 스테디셀러의 출현🔎</span></a>
+          <a href="#"><span>🏆노벨경제학상 세트🏆</span></a>
+        </div><!-- recom_1 -->
+        <div class="recom_2">
+          <a href="#"><span>💗보통의 연인들을 위한 보통의 연애담💗</span></a>
+          <a href="#"><span>올 타임 베스트셀러📚</span></a>
+        </div>
+        <div class="recom_3">
+          <a href="#"><span>용기있게 행동하는 사람💪</span></a>
+        </div><!-- recom_3 -->
+      </div><!-- recom_cube -->
+    </div><!-- recom_wrap -->
+
+    <!-- 250704 금 여기까지했고 이모티콘 어떻게 넣는지, 인기도서에 순위 넣는거 다시 찾아보기 아직 해결 안 됨-->
+    <!-- 인기도서에 책 사진은 넣었는데.. 사이즈가 다 다름.(피그마에서 만들어오기?) ㅇㅋㅇㅋ -->
+
+
+    <footer id="bottom">
+      <!-- ul, li 로 2단 메뉴로 만들어서 고객안에 서비스 넣고 공지안에 기타넣고 회사는 공지랑 같이 div로 묶고 sns를 마지막에 넣고... 민위드:320인데 380이후부터 깨짐 -->
+
+      <div class="bot_top">
+        <div class="vol1">
+          <!-- <img src="images/volume_down.png" alt="공지사항"> -->
+          <p class="vol_txt1">고객센터</p>
+          <p>기타문의</p>
+          <p>콘텐츠 제공문의</p>
+          <p>사업 제휴 문의</p>
+        </div><!-- vol1 -->
+        <div class="vol2">
+          <!-- <img src="images/volume_down.png" alt="공지사항"> -->
+          <p class="vol_txt2">공지사항</p>
+          <p>기타문의</p>
+          <p>콘텐츠 제공문의</p>
+          <p>사업 제휴 문의</p>
+        </div><!-- vol2 -->
+      </div><!-- bot_top -->
+
+      <div id="bot_bot">
+        <ul class="atc1">
+          <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
+          <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
+          <li><a href="#"><img src="images/youtube.png" alt="youtube"></a></li>
+        </ul>
+
+        <ul class="atc2">
+          <li>회사</li>
+          <li>회사 소개</li>
+          <li>인재채용</li>
+        </ul>
+      </div><!-- bot_bot -->
+    </footer><!-- bottom -->
+  </div><!-- wrap -->
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

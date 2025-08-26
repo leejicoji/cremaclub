@@ -1,0 +1,61 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+/* #DDE5B6
+#DCDEB7
+#F0EAD2
+#6C584C */
+
+/* 에러난 줄 다음 줄은 실행이 안 됨 */
+/* reset */
+a { text-decoration: none; color: inherit; }
+body { color: #333; }
+html, body { width: 100%; }
+
+/* wrap */
+#wrap { width: 100%; min-width: 320px; }
+.top_line { background-color: #6C584C; width: 100%; height: 30px; }
+#top { padding: 10px; display: flex; justify-content: space-between; /* 수평정렬 */ align-items: center; background-color: #F0EAD2; }
+.new_logo { width: 60px; }
+
+#title_wrap h1 { font-size: 25px; margin: 80px 0 0 60px;  }
+.free { color: #6C584C; font-size: 15px; margin: 10px 0 70px 60px; }
+
+#login1 { display: flex; justify-content: center; }
+#u_id, #u_pwd { color: #6C584C; text-indent: 1em; border: 1px solid #f0ead2; width: 100%; height: 45px; box-sizing: border-box; display: flex; background-color: #f0ead2; margin-bottom: 10px;/*  margin-left: 60px;  */border-radius: 10px; }
+
+#btn_wrap { display: flex; flex-wrap: wrap; justify-content: center; width: 100%; height: 45px; }
+#l_btn { border: 1px solid #DDE5B6; border-radius: 10px; background-color: #DDE5B6; width: 120px; height: 45px; color: #6C584C; font-weight: bold; font-size: 20px; }
+
+#plus { text-align: center; }
+#plus a { font-size: 15px; margin-top: 30px; display: inline-block; }
+
+#or { position: relative; }
+.l_line { width: 25%; border-bottom: 1px solid #6C584C; position: absolute; left: 50px; top: 10px; }
+.or_txt { color: #6C584C; text-align: center; margin-top: 20px; }
+.r_line { width: 25%; border-bottom: 1px solid #6C584C; position: absolute; right: 50px; top: 10px;  }
+
+
+#l_sns { box-sizing: border-box; display: flex; justify-content: center; }
+#l_sns a img { margin: 20px 10px 0 10px; } 
+
+
+/* bottom */
+#bottom { padding: 60px 50px 30px 50px; }
+
+.bot_top { width: 100%; display: flex; justify-content: space-between; padding: 0; }
+.vol1 p { font-size: 12px;  padding-left: 35px; }
+.vol_txt1 { background: url("../images/headset_mic.png") no-repeat left center; height: 60px; line-height: 60px; }
+
+.vol2 p { font-size: 12px;  padding-left: 35px; }
+.vol_txt2 { background: url("../images/volume_down.png") no-repeat left center; height: 60px; line-height: 60px; }
+
+
+#bot_bot { display: flex; justify-content: space-between; margin: 30px auto; width: 85%; }
+.atc1 { width: 40%; display: flex; justify-content: space-between; align-items: center; }
+.atc1 img { width: 80%; }
+.atc2 { font-size: 12px; clear: both; }

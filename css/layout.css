@@ -1,0 +1,333 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* #DDE5B6
+#DCDEB7
+#F0EAD2
+#6C584C */
+
+
+/* reset */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+}
+
+html,
+body {
+    width: 100%;
+}
+
+/* wrap */
+#wrap { width: 100%; min-width: 320px; }
+.top_line { background-color: #6C584C; width: 100%; height: 30px; }
+#top { padding: 10px; display: flex; justify-content: space-between; /* 수평정렬 */ align-items: center; background-color: #F0EAD2; }
+.new_logo { width: 60px; }
+/* 위에 갈색 라인 어떻게 줄지 모르겠다 (어찌저찌 됐다) */
+
+/* menu_wrap */
+.menu_top {
+    display: flex;
+    margin: 10px 20px;
+}
+
+.menu_top li {
+    padding: 0 5px;
+}
+
+/* menu_main */
+#menu_main h2 {
+    font-size: 25px;
+    padding: 10px 25px;
+    border-bottom: 1px solid #6C584C;
+    justify-content: center;
+}
+
+#theme {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    margin: 0 auto;
+}
+
+#theme li {
+    width: 48%;
+    height: 150px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+}
+
+#theme li:hover {
+    cursor: pointer;
+}
+
+.them_1 {
+    background: url("../images/inmun.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_4 {
+    background: url("../images/yuksa.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_5 {
+    background: url("../images/gonggam.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_1,
+.them_4,
+.them_5 {
+    background-color: #ADC178;
+}
+
+.them_2 {
+    background: url("../images/essay.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_3 {
+    background: url("../images/guahak.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_6 {
+    background: url("../images/sosul.png") no-repeat right;
+    background-size: 120px;
+}
+
+.them_2,
+.them_3,
+.them_6 {
+    background-color: #A98467;
+}
+
+.title {
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    font-size: 15px;
+    position: absolute;
+    left: 20px;
+    top: 90px;
+}
+
+.tag {
+    color: #fff;
+    font-size: 12px;
+    position: absolute;
+    left: 20px;
+    top: 110px;
+}
+
+/* select_wrap */
+#select_wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+    margin: 0 auto;
+}
+
+.free {
+    font-size: 25px;
+    text-align: center;
+    width: 250px;
+    height: 45px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #DDE5B6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+}
+
+.sel {
+    color: #382B23;
+    font-size: 16px;
+    font-weight: bold;
+    width: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #DDE5B6;
+}
+
+.pay_wrap {
+    color: #6C584C;
+    width: 95%;
+    height: 110px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 10px 0;
+    background-color: #F0EAD2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 선택된 요금제 */
+.pay_wrap.selected {
+    background-color: #DDE5B6;
+    border: 2px solid #A4B494;
+    box-shadow: 0 0 5px rgba(100, 100, 100, 0.5);
+}
+
+
+/* .pay_wrap ul { line-height: 1.2em; position: relative; }
+/* .price { position: absolute; left: 37%; } */
+.list {
+    line-height: 1.5em;
+    font-size: 14px;
+}
+
+#select_wrap li {
+    list-style-type: disc;
+}
+
+#select_wrap img {
+    margin-right: 10px;
+}
+
+.sel55,
+.sel77,
+.sel99 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 수평정렬할때 : display: flex; , justify-content: space-between;, center; */
+/* 텍스트 박스 가운데로 정렬할때 : align-items: center; */
+#payBtn {
+    text-decoration: none;
+    color: #382B23;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 124px;
+    height: 36px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background-color: #DDE5B6;
+    float: right;
+    margin: 20px 50px 30px 0;
+    border: none;
+}
+
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    /* 아주 크게 */
+    transition: all 0.3s ease;
+    animation: fadeIn 0.4s ease-out;
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+/* bottom */
+#bottom {
+    padding: 60px 50px 30px 50px;
+}
+
+.bot_top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+.vol1 p {
+    font-size: 12px;
+    padding-left: 35px;
+}
+
+.vol_txt1 {
+    background: url("../images/headset_mic.png") no-repeat left center;
+    height: 60px;
+    line-height: 60px;
+}
+
+.vol2 p {
+    font-size: 12px;
+    padding-left: 35px;
+}
+
+.vol_txt2 {
+    background: url("../images/volume_down.png") no-repeat left center;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+#bot_bot {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 85%;
+}
+
+.atc1 {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.atc1 img {
+    width: 80%;
+}
+
+.atc2 {
+    font-size: 12px;
+    clear: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translate(-50%, -50%);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
